@@ -19,7 +19,7 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import {format} from "date-fns"
 import { useNavigate } from "react-router-dom"
 
- const Head = () => {
+ const Head = ({type}) => {
     const [destination, setDestination] = useState("");
     const [openDate, setOpenDate] = useState(false);
     const [date, setDate] = useState([
@@ -52,7 +52,9 @@ import { useNavigate } from "react-router-dom"
     
   return (
     <div className="Head">
-        <div className="headContainer">
+        <div className={
+          type === "list" ? "headContainer list" : "headContainer"
+        }>
             <div className="headList">
                 <div className="headListItem ">
                 <FontAwesomeIcon icon={faCity}/>
@@ -71,6 +73,8 @@ import { useNavigate } from "react-router-dom"
                 <span>Forêt</span>
                 </div>
                 </div>
+                {type !== "list" && (
+                <>
                 <h1>Choisissez où vous reposer</h1>
                 <div className="headSearch">
                     <div className="headSearchInput">
@@ -169,13 +173,15 @@ import { useNavigate } from "react-router-dom"
                     </div>
                   </div>
                 )}
-              </div>
+                    </div>
                     <div className="headerSearchItem">
                         <button className="headerBtn" onClick={handleSearch} >
                             <span>Search</span> 
                         </button>
                     </div>  
                 </div>
+                </>
+        )}
         </div>
     </div>
   )

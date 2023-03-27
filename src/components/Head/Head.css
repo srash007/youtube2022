@@ -24,6 +24,10 @@
     margin: 20px 0px 100px 0px;
 }
 
+.headContainer.list{
+  margin: 20px 0px 0px 0px;
+
+}
 .headSearch {
   height: 30px;
   background-color:whitesmoke;
