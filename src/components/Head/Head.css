@@ -17,11 +17,7 @@
     gap: 10px;
 
 }
-.headerListItem.active {
-    border: 1px solid white;
-    padding: 10px;
-    border-radius: 20px;
-  }
+
 .headContainer{
     width: 100%;
     max-width:  1024px; 
@@ -29,10 +25,10 @@
 }
 
 .headSearch {
-    height: 30px;
-    background-color: rgb(94, 7, 7);
-    border: 3px solid rgb(202, 6, 39);
-    display: flex;
+  height: 30px;
+  background-color:whitesmoke;
+  border: 3px solid rgb(202, 6, 39);
+  display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 10px 0px;
@@ -44,13 +40,14 @@
 }
 
 .headIcon {
-    color: whitesmoke;
+    color: rgb(6, 82, 36);
   }
   
 .headSearchItem{
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #000;
 }
   
 .headSearchInput {
@@ -68,7 +65,7 @@
   position: absolute;
   top: 50px;
   background-color: white;
-  color: gray;
+  color: salmon;
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
